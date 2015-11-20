@@ -1,0 +1,2 @@
+# ClearCacheBundle
+Plugin for Elcodi
