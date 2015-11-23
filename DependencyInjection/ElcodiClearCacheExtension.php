@@ -51,8 +51,8 @@ class ElcodiClearCacheExtension extends AbstractExtension
     public function getConfigFiles(array $config)
     {
         return [
-            'services',
-            'templating',
+            'menu',
+            'services'
         ];
     }
 

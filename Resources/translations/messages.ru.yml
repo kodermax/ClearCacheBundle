@@ -1,5 +1,9 @@
+plugin_type:
+    utility: 'Утилиты'
+
 elcodi_plugin:
     clear_cache:
-        description: 'Очистка файлов кеша Elcodi'
+        description: 'Очистка файлов кэша Elcodi'
         field:
         name: 'Очитска кэша'
+

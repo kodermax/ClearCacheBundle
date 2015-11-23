@@ -12,7 +12,7 @@ use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 use Elcodi\Component\Plugin\Interfaces\PluginInterface;
-use Elcodi\Plugin\DisqusBundle\DependencyInjection\ElcodiDisqusExtension;
+use Elcodi\Plugin\ClearCacheBundle\DependencyInjection\ElcodiClearCacheExtension;
 
 
 class ElcodiClearCacheBundle extends Bundle implements PluginInterface

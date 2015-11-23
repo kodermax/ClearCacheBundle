@@ -1,0 +1,9 @@
+{% extends 'AdminCoreBundle::layout.html.twig' %}
+{% block breadcrumb %}
+        {% include '@AdminCore/Common/breadcrumb.html.twig' with {
+        breadcrumb: [
+        { name: 'elcodi_plugin.clear_cache.name'|trans, active: true },
+        ]
+        } %}
+
+{% endblock breadcrumb %}

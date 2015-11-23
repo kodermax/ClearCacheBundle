@@ -1,0 +1,11 @@
+services:
+
+    #
+    # Twig renderer
+    #
+    elcodi_plugin.clearcache.renderer:
+        class: Elcodi\Plugin\ClearCacheBundle\Templating\TwigRenderer
+        calls:
+            - [setTemplating, [@twig]]
+            - [setPlugin, [@elcodi_plugin.clearcache]]
+
