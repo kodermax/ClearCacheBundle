@@ -1,0 +1,59 @@
+<script type="application/javascript" src="/bundles/elcodiclearcache/js/highcharts.js"></script>
+<script>
+    $(function () {
+
+        $(document).ready(function () {
+
+// Build the chart
+            $('#container').highcharts({
+                chart: {
+                    plotBackgroundColor: null,
+                    plotBorderWidth: null,
+                    plotShadow: false,
+                    type: 'pie'
+                },
+                title: {
+                    text: 'FILE CACHE'
+                },
+                tooltip: {
+                    pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+                },
+                plotOptions: {
+                    pie: {
+                        allowPointSelect: true,
+                        cursor: 'pointer',
+                        dataLabels: {
+                            enabled: false
+                        },
+                        showInLegend: true
+                    }
+                },
+                series: [{
+                    name: "Cache Type",
+                    colorByPoint: true,
+                    data: [{
+                        name: "annotations",
+                        y: 56.33
+                    }, {
+                        name: "doctrine",
+                        y: 24.03,
+                        sliced: true,
+                        selected: true
+                    }, {
+                        name: "profiler",
+                        y: 10.38
+                    }, {
+                        name: "translations",
+                        y: 4.77
+                    }, {
+                        name: "twig",
+                        y: 0.91
+                    }, {
+                        name: "Container ans classses",
+                        y: 0.2
+                    }]
+                }]
+            });
+        });
+    });
+</script>

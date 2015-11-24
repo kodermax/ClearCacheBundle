@@ -29,7 +29,7 @@ class ElcodiClearCacheExtension extends AbstractExtension
      *
      * Extension name
      */
-    const EXTENSION_NAME = 'elcodi_clear_cache';
+    const EXTENSION_NAME = 'elcodi_clearcache';
 
     /**
      * Get the Config file location
@@ -52,7 +52,8 @@ class ElcodiClearCacheExtension extends AbstractExtension
     {
         return [
             'menu',
-            'services'
+            'services',
+            'templating'
         ];
     }
 

@@ -8,4 +8,5 @@ services:
         calls:
             - [setTemplating, [@twig]]
             - [setPlugin, [@elcodi_plugin.clearcache]]
-
+        tags:
+            - { name: kernel.event_listener, event: admin.footer_script, method: renderJavascript }
