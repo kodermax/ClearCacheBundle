@@ -5,3 +5,4 @@ elcodi_plugin:
         description: 'Clear file cache button for Elcodi'
         field:
         name: 'Clear Cache'
+        button: 'Clear'
