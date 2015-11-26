@@ -46,12 +46,6 @@ class ClearCache
         $arResult['cache_translations'] = $this->getDirSize($this->cachePath.'/translations');
         $arResult['cache_profiler'] = $this->getDirSize($this->cachePath.'/profiler');
         $arResult['cache_twig'] = $this->getDirSize($this->cachePath.'/twig');
-        $allSize = 0;
-        foreach($arResult as $value){
-            $allSize += $value;
-        }
-        //$arResult['all_cache'] = $this->formatSize($allSize);
-        $arResult['all'] = $allSize;
         return $arResult;
 
     }
