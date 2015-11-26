@@ -24,8 +24,6 @@
 
 // Build the chart
                                 var sizes = JSON.parse('{{ sizes|raw }}');
-                                var allSize = sizes['all'];
-                                delete sizes['all'];
                                 var series = [];
                                 $.each(sizes, function(key, value) {
                                         series.push({name: key, y: value});
