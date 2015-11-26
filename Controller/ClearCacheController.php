@@ -7,6 +7,7 @@
  */
 
 namespace Elcodi\Plugin\ClearCacheBundle\Controller;
+
 use Elcodi\Plugin\ClearCacheBundle\Services\ClearCache;
 use Mmoreram\ControllerExtraBundle\Annotation\Entity as EntityAnnotation;
 use Mmoreram\ControllerExtraBundle\Annotation\Form as FormAnnotation;
@@ -39,6 +40,6 @@ class ClearCacheController extends AbstractAdminController
     {
         $clearCache = new ClearCache($this->get('kernel')->getCacheDir());
         $arSizes = $clearCache->getSizes();
-        return ['sizes' => $arSizes];
+        return ['sizes' => json_encode($arSizes)];
     }
 }

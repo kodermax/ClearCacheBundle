@@ -50,7 +50,8 @@ class ClearCache
         foreach($arResult as $value){
             $allSize += $value;
         }
-        $arResult['all'] = $this->formatSize($allSize);
+        //$arResult['all_cache'] = $this->formatSize($allSize);
+        $arResult['all'] = $allSize;
         return $arResult;
 
     }
