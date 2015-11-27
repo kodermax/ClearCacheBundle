@@ -53,7 +53,7 @@ class ElcodiClearCacheExtension extends AbstractExtension
         return [
             'menu',
             'services',
-            'templating'
+            'templating',
         ];
     }
 

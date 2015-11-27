@@ -5,12 +5,9 @@
  * Date: 23.11.2015
  * Time: 13:14
  */
-
 namespace Elcodi\Plugin\ClearCacheBundle\Controller;
 
 use Elcodi\Plugin\ClearCacheBundle\Services\ClearCache;
-use Mmoreram\ControllerExtraBundle\Annotation\Entity as EntityAnnotation;
-use Mmoreram\ControllerExtraBundle\Annotation\Form as FormAnnotation;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
@@ -40,6 +37,7 @@ class ClearCacheController extends AbstractAdminController
     {
         $clearCache = new ClearCache($this->get('kernel')->getCacheDir());
         $arSizes = $clearCache->getSizes();
+
         return ['sizes' => json_encode($arSizes)];
     }
 
@@ -61,7 +59,7 @@ class ClearCacheController extends AbstractAdminController
                 ->get('translator')
                 ->trans('elcodi_plugin.clear_cache.cleared')
         );
-        return $this->redirectToRoute('admin_clear_cache_index');
 
+        return $this->redirectToRoute('admin_clear_cache_index');
     }
 }

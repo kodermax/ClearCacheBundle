@@ -5,12 +5,11 @@
  * Date: 24.11.2015
  * Time: 10:25
  */
-
 namespace Elcodi\Plugin\ClearCacheBundle\Templating;
+
 use Elcodi\Component\Plugin\Entity\Plugin;
 use Elcodi\Component\Plugin\EventDispatcher\Interfaces\EventInterface;
 use Elcodi\Component\Plugin\Templating\Traits\TemplatingTrait;
-
 
 class TwigRenderer
 {
@@ -43,7 +42,7 @@ class TwigRenderer
      */
     public function renderJavascript(EventInterface $event)
     {
-            $this->appendTemplate(
+        $this->appendTemplate(
                 '@ElcodiClearCache/js.html.twig',
                 $event,
                 $this->plugin

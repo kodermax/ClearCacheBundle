@@ -49,7 +49,7 @@ class MenuBuilder extends AbstractMenuBuilder implements MenuBuilderInterface
                             ->setName('elcodi_plugin.clear_cache.name')
                             ->setUrl('admin_clear_cache_index')
                             ->setActiveUrls([
-                                'admin_clear_cache_index'
+                                'admin_clear_cache_index',
                             ])
                     )
             );
