@@ -1,19 +1,25 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kodermax
- * Date: 20.11.2015
- * Time: 17:26
+
+/*
+ * This file is part of the Elcodi package.
+ *
+ * Copyright (c) 2014-2015 Elcodi.com
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author Maksim <kodermax@gmail.com>
+ *
  */
 
 namespace Elcodi\Plugin\ClearCacheBundle;
+
 use Symfony\Component\Console\Application;
 use Symfony\Component\DependencyInjection\Extension\ExtensionInterface;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
 use Elcodi\Component\Plugin\Interfaces\PluginInterface;
 use Elcodi\Plugin\ClearCacheBundle\DependencyInjection\ElcodiClearCacheExtension;
-
 
 class ElcodiClearCacheBundle extends Bundle implements PluginInterface
 {

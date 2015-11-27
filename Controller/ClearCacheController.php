@@ -1,24 +1,30 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kodermax
- * Date: 23.11.2015
- * Time: 13:14
+
+/*
+ * This file is part of the Elcodi package.
+ *
+ * Copyright (c) 2014-2015 Elcodi.com
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author Maksim <kodermax@gmail.com>
  */
+
 namespace Elcodi\Plugin\ClearCacheBundle\Controller;
 
-use Elcodi\Plugin\ClearCacheBundle\Services\ClearCache;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 
 use Elcodi\Admin\CoreBundle\Controller\Abstracts\AbstractAdminController;
+use Elcodi\Plugin\ClearCacheBundle\Services\ClearCache;
 
 /**
  * Class ClearCacheComponentController
  *
  * @Route(
- *      path = "clearcache"
+ *      path = "utilities/clearcache"
  * )
  */
 class ClearCacheController extends AbstractAdminController

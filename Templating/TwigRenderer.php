@@ -1,10 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: kodermax
- * Date: 24.11.2015
- * Time: 10:25
+
+/*
+ * This file is part of the Elcodi package.
+ *
+ * Copyright (c) 2014-2015 Elcodi.com
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ *
+ * @author Maksim <kodermax@gmail.com>
+ *
  */
+
 namespace Elcodi\Plugin\ClearCacheBundle\Templating;
 
 use Elcodi\Component\Plugin\Entity\Plugin;
@@ -17,7 +24,6 @@ class TwigRenderer
     /**
      * @var Plugin
      *
-     * Plugin
      */
     protected $plugin;
 
