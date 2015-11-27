@@ -8,7 +8,10 @@
 
 namespace Elcodi\Plugin\ClearCacheBundle\Services;
 
-
+/**
+ * Class ClearCache
+ * @package Elcodi\Plugin\ClearCacheBundle\Services
+ */
 class ClearCache
 {
     /**
@@ -18,11 +21,20 @@ class ClearCache
      */
     protected $cachePath;
 
+    /**
+     * ClearCache constructor.
+     * @param $cachePath CachePath
+     */
     public function __construct($cachePath)
     {
         $this->cachePath = $cachePath;
     }
 
+    /**
+     * Return Size Of Directory
+     * @param $dir - path
+     * @return int - bytes
+     */
     private function getDirSize($dir)
     {
 
@@ -40,6 +52,10 @@ class ClearCache
         return $size;
     }
 
+    /**
+     * Return an array of cache sizes
+     * @return mixed
+     */
     public function getSizes()
     {
 
@@ -51,6 +67,11 @@ class ClearCache
         return $arResult;
 
     }
+
+    /**
+     * Remove directory
+     * @param $path Path
+     */
     private function deleteDir($path){
         $files = glob($path . '/*');
 
@@ -62,6 +83,10 @@ class ClearCache
         }
         rmdir($path);
     }
+
+    /**
+     * Delete all Cache
+     */
     public function deleteCache()
     {
         $this->deleteDir($this->cachePath . '/annotations');

@@ -44,6 +44,7 @@ class ClearCacheController extends AbstractAdminController
     }
 
     /**
+     * Clear Cache Action
      * @Route(
      *      path = "/update",
      *      name = "admin_clear_cache_update",
