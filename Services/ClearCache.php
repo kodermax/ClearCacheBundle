@@ -29,7 +29,7 @@ class ClearCache
         if (!file_exists($dir)) {
             return 0;
         }
-        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($dir), \RecursiveIteratorIterator::SELF_FIRST );
+        $iterator = new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($dir), \RecursiveIteratorIterator::SELF_FIRST);
         $size = 0;
         foreach ($iterator as $path) {
             if (!$path->isDir()) {
@@ -39,22 +39,36 @@ class ClearCache
         }
         return $size;
     }
-    public function getSizes(){
 
-        $arResult['cache_annotations'] = $this->getDirSize($this->cachePath.'/annotations');
-        $arResult['cache_doctrine'] = $this->getDirSize($this->cachePath.'/doctrine');
-        $arResult['cache_translations'] = $this->getDirSize($this->cachePath.'/translations');
-        $arResult['cache_profiler'] = $this->getDirSize($this->cachePath.'/profiler');
-        $arResult['cache_twig'] = $this->getDirSize($this->cachePath.'/twig');
+    public function getSizes()
+    {
+
+        $arResult['cache_annotations'] = $this->getDirSize($this->cachePath . '/annotations');
+        $arResult['cache_doctrine'] = $this->getDirSize($this->cachePath . '/doctrine');
+        $arResult['cache_translations'] = $this->getDirSize($this->cachePath . '/translations');
+        $arResult['cache_profiler'] = $this->getDirSize($this->cachePath . '/profiler');
+        $arResult['cache_twig'] = $this->getDirSize($this->cachePath . '/twig');
         return $arResult;
 
     }
-    private function formatSize($size) {
-        $mod = 1024;
-        $units = explode(' ','B KB MB GB TB PB');
-        for ($i = 0; $size > $mod; $i++) {
-            $size /= $mod;
+    private function deleteDir($path){
+        $files = glob($path . '/*');
+
+        foreach ($files as $file) {
+
+            is_dir($file)
+                ? $this->deleteDir($file)
+                : unlink($file);
         }
-        return round($size, 2) . ' ' . $units[$i];
+        rmdir($path);
+    }
+    public function deleteCache()
+    {
+        $this->deleteDir($this->cachePath . '/annotations');
+        $this->deleteDir($this->cachePath . '/doctrine');
+        $this->deleteDir($this->cachePath . '/translations');
+        $this->deleteDir($this->cachePath . '/profiler');
+        $this->deleteDir($this->cachePath . '/twig');
+
     }
 }

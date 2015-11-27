@@ -6,3 +6,4 @@ elcodi_plugin:
         field:
         name: 'Clear Cache'
         button: 'Clear'
+        cleared: 'File cache cleared!'

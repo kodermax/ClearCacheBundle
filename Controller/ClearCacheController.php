@@ -30,7 +30,7 @@ class ClearCacheController extends AbstractAdminController
      * View Page Clear Cache
      *
      * @Route(
-     *      path = "/index",
+     *      path = "/",
      *      name = "admin_clear_cache_index"
      * )
      * @Template
@@ -41,5 +41,26 @@ class ClearCacheController extends AbstractAdminController
         $clearCache = new ClearCache($this->get('kernel')->getCacheDir());
         $arSizes = $clearCache->getSizes();
         return ['sizes' => json_encode($arSizes)];
+    }
+
+    /**
+     * @Route(
+     *      path = "/update",
+     *      name = "admin_clear_cache_update",
+     *      methods = {"POST"}
+     * )
+     */
+    public function editAction()
+    {
+        $clearCache = new ClearCache($this->get('kernel')->getCacheDir());
+        $clearCache->deleteCache();
+        $this->addFlash(
+            'success',
+            $this
+                ->get('translator')
+                ->trans('elcodi_plugin.clear_cache.cleared')
+        );
+        return $this->redirectToRoute('admin_clear_cache_index');
+
     }
 }
