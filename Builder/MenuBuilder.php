@@ -8,6 +8,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
+ * Feel free to edit as you please, and have fun.
+ *
+ * @author Marc Morera <yuhu@mmoreram.com>
+ * @author Aldo Chiecchia <zimage@tiscali.it>
+ * @author Elcodi Team <tech@elcodi.com>
  * @author Maksim <kodermax@gmail.com>
  */
 
@@ -36,7 +41,6 @@ class MenuBuilder extends AbstractMenuBuilder implements MenuBuilderInterface
                     ->create()
                     ->setName('plugin_type.utility')
                     ->setTag('settings')
-                    ->setCode('wrench')
                     ->setPriority(31)
                     ->addSubnode(
                         $this
