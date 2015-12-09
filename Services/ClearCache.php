@@ -8,7 +8,12 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  *
- * @author Maksim <kodermax@gmail.com>
+ * Feel free to edit as you please, and have fun.
+ *
+ * @author Marc Morera <yuhu@mmoreram.com>
+ * @author Aldo Chiecchia <zimage@tiscali.it>
+ * @author Elcodi Team <tech@elcodi.com>
+ * @author Maksim Karpychev <kodermax@gmail.com>
  */
 
 namespace Elcodi\Plugin\ClearCacheBundle\Services;
